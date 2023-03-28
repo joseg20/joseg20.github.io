@@ -30,9 +30,6 @@ export default function Home() {
   return (
     <div className={isDarkMode ? styles.containerDark : styles.container}>
        <Head>
-       <style>
-       @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
-      </style>
 	  <title>Jose Guillen</title>
 	  <link rel="shortcut icon" href="/cookie.ico"/>
       </Head>

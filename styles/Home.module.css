@@ -8,7 +8,6 @@
   height: 100%;
   min-height: 100vh;
   transition: background-color 0.5s;
-  font-family: 'Roboto Slab', serif;
 }
 
 .containerDark {
@@ -20,7 +19,6 @@
   align-items: center;
   height: 100vh;
   transition: background-color 0.5s;
-  font-family: 'Roboto Slab', serif;
 }
 
 .title {
@@ -186,9 +184,6 @@
 @media screen and (max-width: 768px) {
   .title {
     font-size: 2.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
   }
 
   .aboutContainer {
