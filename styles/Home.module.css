@@ -185,7 +185,10 @@
 
 @media screen and (max-width: 768px) {
   .title {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 
   .aboutContainer {
