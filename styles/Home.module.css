@@ -5,7 +5,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   transition: background-color 0.5s;
 }
 
@@ -30,7 +31,7 @@
   border: 2px solid #333;
   color: #333;
   padding: 0.5rem 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-size: 1.2rem;
   cursor: pointer;
   transition: opacity 0.3s, transform 0.3s;
@@ -46,17 +47,19 @@
   transform: translateY(2px);
 }
 
+
 .aboutContainer {
   background-color: transparent;
   color: #333;
   padding: 1rem;
-  margin-top: 2rem;
-  max-width: 80%;
+  margin-top: 0rem;
+  margin-bottom: -1rem;
+  max-width: 50%;
   text-align: center;
 }
 
 .imageContainer {
-  margin-top: 2rem;
+  margin-top: 1.2rem;
 }
 
 .imageContainer img {
@@ -136,5 +139,44 @@
 
 .icondark {
  filter: invert(1) brightness(100%);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+.fadeIn1 {
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+.fadeIn2 {
+  animation: fadeIn 2s ease-in-out forwards;
+}
+.fadeIn3 {
+  animation: fadeIn 2.5s ease-in-out forwards;
+}
+.fadeIn4 {
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+
+.fadeOut {
+  animation: fadeOut 0.5s ease-in-out forwards;
 }
 

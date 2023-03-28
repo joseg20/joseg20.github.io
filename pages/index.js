@@ -5,10 +5,21 @@ import Head from 'next/head';
 export default function Home() {
   const [showAbout, setShowAbout] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [aboutAnimation, setAboutAnimation] = useState("");
 
   const toggleAbout = () => {
-    setShowAbout(!showAbout);
+    if (!showAbout) {
+      setAboutAnimation("fadeIn");
+      setShowAbout(true);
+    } else {
+      setAboutAnimation("fadeOut");
+      setTimeout(() => {
+        setShowAbout(false);
+        setAboutAnimation("");
+      }, 500);
+    }
   };
+
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -21,23 +32,25 @@ export default function Home() {
 	  <title>Jose Guillen</title>
 	  <link rel="shortcut icon" href="/cookie.ico"/>
       </Head>
-      <h1>Hello, I&apos;m Jose Guillen</h1>
-      <button
-  	className={`${styles.aboutButton} ${isDarkMode ? styles.aboutButtondark : ""}`}
-  	onClick={toggleAbout}
-      >
-  	About Me
-      </button>
-      {showAbout && <About isDarkMode={isDarkMode} />}
-      <div className={styles.imageContainer}>
+      <h1 className={styles.fadeIn1} >Hello, I&apos;m Jose Guillen</h1>
+	{!showAbout && (
+	  <button
+	    className={`${styles.aboutButton} ${isDarkMode ? styles.aboutButtondark : ""} ${styles.fadeIn2} `}
+	    onClick={toggleAbout}
+	  >
+	    About Me
+	  </button>
+	)}
+	{showAbout && <About isDarkMode={isDarkMode} animation={aboutAnimation} />}
+      <div className={`${styles.imageContainer} ${styles.fadeIn3}`}>
         <img src="/jose-guillen.jpg" alt="Jose Guillen" />
       </div>
-      <div className={styles.iconsContainer}>
+      <div className={`${styles.iconsContainer} ${styles.fadeIn4}`}>
         <a href="https://github.com/joseg20" target="_blank" rel="noreferrer">
           <img
             src="/github.png"
             alt="Github"
-            className={`${styles.icon} ${isDarkMode ? styles.icondark : ""}`}
+            className={`${styles.icon} ${isDarkMode ? styles.icondark : ""} ${showAbout ? styles.hidden : ""}`}
             onMouseOver={(e) => (e.currentTarget.src = "/github.png")}
             onMouseOut={(e) => (e.currentTarget.src = "/github.png")}
           />
@@ -67,16 +80,20 @@ export default function Home() {
         ) : (
           <img src="/moon.png" alt="Moon" />
         )}
-      </button>
+      </button>  
     </div>
   );
 }
 
-function About({ showAbout, isDarkMode }) {
+function About({ isDarkMode, animation }) {
   return (
-    <div className={`${styles.aboutContainer} ${isDarkMode ? styles.aboutContainerdark : ""}`}>
+    <div className={`${styles.aboutContainer} ${isDarkMode ? styles.aboutContainerdark : ""} ${styles[animation]}`}>
       <p>
-        Nací en Antofagasta, soy futbolista, me gusta programar, etc.
+A student of Electronic Engineering at Federico Santa María University. My focus is on studying and developing computer network     systems, as well as designing and building cutting-edge hardware and software. To me, technology is a key tool for transforming the world, and I&apos;m excited to be a part of its evolution in the future as an electronic engineer.
+      </p>
+	<div><br /></div>
+      <p>
+       I enjoy trying out new experiences, having some mate or coffee, listening to urban music, and watching soccer games.
       </p>
     </div>
   );
