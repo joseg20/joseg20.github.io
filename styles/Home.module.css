@@ -180,3 +180,31 @@
   animation: fadeOut 0.5s ease-in-out forwards;
 }
 
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .aboutContainer {
+    max-width: 90%;
+  }
+
+  .imageContainer img {
+    max-width: 10rem;
+  }
+
+  .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .iconsContainer {
+    flex-wrap: wrap;
+  }
+
+  .icon {
+    margin: 0.5rem;
+  }
+}
+
