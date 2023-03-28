@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from '@/styles/Home.module.css'
 import Head from 'next/head';
 
+
 export default function Home() {
   const [showAbout, setShowAbout] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -29,6 +30,9 @@ export default function Home() {
   return (
     <div className={isDarkMode ? styles.containerDark : styles.container}>
        <Head>
+       <style>
+       @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+      </style>
 	  <title>Jose Guillen</title>
 	  <link rel="shortcut icon" href="/cookie.ico"/>
       </Head>
