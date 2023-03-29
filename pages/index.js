@@ -30,10 +30,13 @@ export default function Home() {
   return (
     <div className={isDarkMode ? styles.containerDark : styles.container}>
        <Head>
-	  <title>Jose Guillen</title>
+          <style>
+             @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+          </style>
+	  <title className = {styles.title}>Jose Guillen</title>
 	  <link rel="shortcut icon" href="/cookie.ico"/>
       </Head>
-      <h1 className={styles.fadeIn1} >Hello, I&apos;m Jose Guillen</h1>
+      <h1 className={`${styles.fadeIn1} ${styles.title}`} >Hello, I&apos;m Jose Guillen</h1>
 	{!showAbout && (
 	  <button
 	    className={`${styles.aboutButton} ${isDarkMode ? styles.aboutButtondark : ""} ${styles.fadeIn2} `}

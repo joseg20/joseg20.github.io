@@ -1,34 +1,36 @@
 .container {
-  background-color: #f7f7f7;
-  color: #333;
+  background-color: #4899E8;
+  color: #080C0F;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   transition: background-color 0.5s;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .containerDark {
-  background-color: #333;
-  color: #f7f7f7;
+  background-color: #001d3d;
+  color: #FCFCFC;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   transition: background-color 0.5s;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .title {
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
 }
 
 .aboutButton {
   background-color: transparent;
-  border: 2px solid #333;
-  color: #333;
+  border: 3px solid #080C0F;
+  color: #080C0F;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   font-size: 1.2rem;
@@ -49,7 +51,7 @@
 
 .aboutContainer {
   background-color: transparent;
-  color: #333;
+  color: #080C0F;
   padding: 1rem;
   margin-top: 0rem;
   margin-bottom: -1rem;
@@ -112,12 +114,14 @@
 }
 
 .darkModeButton img {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .darkModeButton img[src$="sun.png"] {
   filter: invert(1) brightness(100%);
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .darkMode {
@@ -182,7 +186,8 @@
 
 @media screen and (max-width: 768px) {
   .title {
-    font-size: 2.5rem;
+    font-size: 1.7rem;
+    margin-bottom: 0px ;
   }
 
   .aboutContainer {
@@ -200,10 +205,13 @@
 
   .iconsContainer {
     flex-wrap: wrap;
+    margin-top: 0.5rem;
   }
 
   .icon {
     margin: 0.5rem;
   }
 }
+
+
 
