@@ -68,10 +68,10 @@ export default function Home() {
             onMouseOut={(e) => (e.currentTarget.src = "/linkedin.png")}
           />
         </a>
-        <a href="/cv.pdf" target="_blank" rel="noreferrer">
+        <a href="/Resume_JG.pdf" target="_blank" rel="noreferrer">
           <img
             src="/cv.png"
-            alt="CV"
+            alt="Resume"
             className={`${styles.icon} ${isDarkMode ? styles.icondark : ""}`}
             onMouseOver={(e) => (e.currentTarget.src = "/cv.png")}
             onMouseOut={(e) => (e.currentTarget.src = "/cv.png")}
